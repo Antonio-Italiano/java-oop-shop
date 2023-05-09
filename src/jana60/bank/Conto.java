@@ -1,19 +1,19 @@
 package jana60.bank;
 
+import java.util.Random;
+
 public class Conto {
 
-	private int numeroConto;
+	private String numeroConto;
 	private String nomeProprietario;
 	private Double saldo;
 
-	public Conto(
-			int numeroConto, 
-			String nomeProprietario, 
-			Double saldo) {
+	public Conto(String nomeProprietario) {
 		
-		this.numeroConto = numeroConto;
+		Random rnd = new Random();
+		numeroConto = "" + rnd.nextInt(1001);
 		this.nomeProprietario = nomeProprietario; 
-		this.saldo = saldo; 
+		this.saldo = 0.00; 
 	}
 	
 	//ESTRATTO
